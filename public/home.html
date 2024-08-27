@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GeoVision</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            line-height: 1.6;
+            background-image: url('https://cms-images.mmst.eu/2rj3gcd43pmw/5fc2WELkrXPxxleQN9sZFm/054dc3d133bbc35f2b7cb7d2eee3ca86/junge-frau-mit-vr-brille-futuristisch.jpg?q=60&w=1098');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.7); 
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: rgba(240, 240, 240, 0.8); 
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: rgba(221, 221, 221, 0.8); 
+            border-radius: 10px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 8px; 
+            flex-wrap: wrap; 
+
+        }
+
+
+        .image-container {
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            border-radius: 8px; 
+            overflow: hidden; 
+            transition: transform 0.3s ease; 
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px); 
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; 
+        }
+
+        .image-description {
+            padding: 10px;
+            font-size: 14px;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            padding: 20px;
+            display: flex; 
+            align-items: center; 
+        }
+
+        header img {
+            height: 90px; 
+            margin-right: 30px; 
+        }
+
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center; 
+        }
+
+        .text-container h2 {
+            margin-top: 0; 
+        }
+        .buzzword {
+            background-color: #FFD700; 
+            color: black;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+            transition: all 0.2s ease; 
+        }
+
+        .buzzword:hover {
+            transform: scale(1.1); 
+            background-color: #FFA500; 
+            cursor: pointer;
+        }
+
+        .popup {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10; 
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Objekt/logo.jpg" alt="Logo"> 
+        <h1>GeoVision</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Startseite</a>
+        <a href="hack.html">VR-3D Model</a>
+        <a href="lidar.html">VR</a>
+        <a href="mock.html">Mockup</a>  
+    </nav>
+
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="Objekt/bild1.png" alt="Punktwolke von oben">
+            <div class="image-description">Point clouds from above </div>
+        </div>
+        <div class="image-container">
+            <img src="Objekt/bild2.png" alt="Punktwolke seitlich">
+            <div class="image-description">Lateral point cloud</div>
+        </div>
+        <div class="image-container">
+            <img src="Objekt/bild3.png" alt="Punktwolke frontal">
+            <div class="image-description">Point cloud frontal</div>
+        </div>
+    <div class="text-container">
+            <h2>Welcome to GeoVision!</h2>
+            <p>We are Jonas, Kieran, and Thomas, and our project uses LiDAR scans to create 3D models of various sites, making them fully accessible in VR. This technology enables students, people with disabilities, and anyone interested to explore and learn about areas that are typically difficult to access or too far away.</p>
+    </div>
+
+    <div class="text-container">
+        <h2>Hashtags</h2>
+        <p><p>
+            <span class="buzzword" data-popup="Light Detection and Ranging - a technology that uses lasers to measure distances and create detailed 3D maps.">LiDAR</span> 
+            <span class="buzzword" data-popup="The process of converting LiDAR data into immersive virtual reality experiences.">LiDAR2VR</span> 
+            <span class="buzzword" data-popup="The feeling of being deeply involved and present in a virtual environment.">Immersive</span> 
+            <span class="buzzword" data-popup="The ability for everyone to use and enjoy a technology or experience, regardless of any disabilities they may have.">Open exploration</span>  
+            <span class="buzzword" data-popup="The study of the Earth and its features using technology and data.">Geo-learning</span> 
+            <span class="buzzword" data-popup="The ability to explore and learn about places without physically being there.">Remote exploration</span> 
+            <span class="buzzword" data-popup="A virtual replica of a physical object or system, used for simulation, analysis, and monitoring.">Digital twins</span>
+            <span class="buzzword" data-popup="Education is being revolutionized by a new perspective on things and the better understanding that comes with it  ">Education</span>
+        </p></p>
+    </div>
+    <div id="popup" class="popup">
+        <span id="popup-close" class="popup-close">&times;</span>
+        <p id="popup-content"></p>
+    </div>
+    
+    <div class="text-container">
+            <h2>Explaining Virtual Reality and LIDAR Data to Elementary School Children</h2>
+            <p>
+
+                Virtual Reality (VR):<br><br>
+                Imagine you want to visit a magical world where you can fly with dragons, explore the deep sea, or even walk on Mars. With Virtual Reality, or VR, you can do all these things without ever leaving your room!<br><br>
+                
+                What is VR?<br><br>
+                VR is like a super fancy video game. You wear special goggles called VR headsets. When you put them on, you see and hear a whole new world created by computers.<br><br>
+                
+                How does it work?<br><br>
+                The VR headset has tiny screens inside. These screens show you pictures that change as you move your head, making you feel like you’re really there. Some headsets even have headphones to give you special sounds from the VR world.<br><br>
+                
+                Why is VR cool?<br><br>
+                You can visit places you've never been to before.<br>
+                You can play fun games that feel very real.<br>
+                You can learn about different things, like space or animals, in a super fun way.<br><br>
+                
+                LIDAR Data:<br><br>
+                Now, let’s talk about LIDAR. It might sound like a strange word, but it's really amazing and useful.<br><br>
+                
+                What is LIDAR?<br><br>
+                LIDAR stands for Light Detection and Ranging. It’s a technology that uses light to create detailed maps.<br><br>
+                
+                How does it work?<br><br>
+                Think of a flashlight. LIDAR sends out tiny, invisible light beams, kind of like a flashlight shining in all directions.<br>
+                These light beams bounce off objects and return to the LIDAR device. By measuring how long it takes for the light to come back, LIDAR can figure out how far away things are.<br>
+                It uses this information to create 3D pictures of everything around it.<br><br>
+                
+                Why is LIDAR awesome?<br><br>
+                It helps us make really accurate maps. These maps are so detailed, they can show things like buildings, trees, and even small objects on the ground.<br>
+                It’s used in self-driving cars to help them see the road and avoid obstacles.<br>
+                Scientists use LIDAR to study forests, mountains, and even ancient ruins.<br><br>
+                
+                Putting It All Together:<br><br>
+                Both VR and LIDAR help us see and understand the world in new and exciting ways. VR lets us visit and experience new worlds, while LIDAR helps us create detailed maps of the real world. By learning about these technologies, we can see how people use creativity and science to make amazing things!</p>
+            </div>            
+    <script type="module" src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GeoVision</title>
+    <style>
+        body { 
+            margin: 0; 
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            padding: 20px;
+            display: flex; 
+            align-items: center; 
+            width: 100%; 
+            box-sizing: border-box; 
+            z-index: 10; 
+        }
+
+        header img {
+            height: 90px; 
+            margin-right: 30px; 
+        }
+
+        nav {
+            background-color: #f0f0f0;
+            padding: 5px;
+            width: 100%; 
+            box-sizing: border-box; 
+            display: flex;
+            justify-content: center;
+            z-index: 10; 
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        video {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 150px); 
+            object-fit: cover;
+            z-index: 1; 
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="Objekt/logo.jpg" alt="Logo"> 
+        <h1>GeoVision</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Startseite</a><a href="hack.html">VR-3D Model</a><a href="lidar.html">VR</a>   
+    </nav>
+
+    <video id="videos" loop controls>
+        <source src="Objekt/test.mp4" type="video/mp4">
+        Dein Browser unterstützt das Videoformat nicht.
+    </video>
+    <audio id="meinAudio" loop>
+        <source src="Objekt/Audio_test.mp3" type="audio/mpeg"> 
+        Dein Browser unterstützt das Audioformat nicht.
+    </audio>
+
+    <script src="lidar.js"></script>
+</body>
+</html>
